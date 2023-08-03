@@ -1,24 +1,22 @@
 import React from 'react';
-
-
+import './style.css';
 const Contacto = () => {
   return (
-    <div className="contacto">
-      <h2>Contacto</h2>
-      <form>
-        <label htmlFor="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" />
-
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" />
-
-        <label htmlFor="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje"></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
+    <div className="feed">
+      <h2>WRITE A REVIEW</h2>
+      <div className="feed_form" method="post">
+        <form name="submit-googlesheet">
+          <input type="text" name="Name" placeholder="Name" /><br />
+          <input type="email" name="Email" placeholder="Email ID" /><br />
+          <input type="text" name="Number" placeholder="Contact Number" /><br />
+          <textarea rows="5" cols="7" name="Review" placeholder="Write your review"></textarea><br />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   );
 };
 
 export default Contacto;
+
+
