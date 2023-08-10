@@ -1,11 +1,9 @@
 import React from 'react';
 import sideImage from '../images/side.jpg';
-
-
 const ViewDeliveryMenu = () => {
   return (
     <div>
-    <br/><br/><br/><br/>
+    <br/><br/>
      <div className="side">
        <div className="left">
       <img src={sideImage} alt="side"/> 

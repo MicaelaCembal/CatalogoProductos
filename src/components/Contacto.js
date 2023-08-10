@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from './Footer';
 const Contacto = () => {
   return (
 <div>
@@ -16,7 +15,6 @@ const Contacto = () => {
         </form>
       </div>
       </div>
-      <Footer/>
     </div>
   );
 };

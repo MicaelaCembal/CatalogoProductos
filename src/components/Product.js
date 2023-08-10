@@ -1,19 +1,14 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import cele2 from '../images/cele2.jpg';
 import cele1 from '../images/cele1.jpg';
 import cele4 from '../images/cele4.jpg';
 import cele3 from '../images/cele3.jpg';
-import Footer from './Footer';
-import { Link } from "react-router-dom";
-import SearchBox from './SearchBox';
 
-function Catering() {
+const Main = () => {
   return (
-    <div>
-      <br/><br/><br/><br/><br/><br/><br/><br/><br/>
-      <SearchBox/>
-    
-    <div className="product" style={{paddingTop: "100px"}}>
+<div>
+<div className="product" style={{paddingTop: "100px"}}>
       <h2>EVENTS AND CATERING</h2>
       <div className="product_container" style={{paddingBottom: "50px"}}>
         <div className="item">
@@ -63,10 +58,10 @@ function Catering() {
           </div>
         </div>
       </div>
-      <Footer/>
     </div>
-    </div>
+      <hr/>
+      </div>
   );
-}
+};
 
-export default Catering;
+export default Main;

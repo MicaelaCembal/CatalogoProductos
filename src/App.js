@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Layout from './pages/Layout';
 import Contacto from './components/Contacto';
-import Catering from './components/Catering';
+import Catering from './pages/Catering';
 import ViewDeliveryMenu from './components/ViewDeliveryMenu';
 import './App.css';
 
