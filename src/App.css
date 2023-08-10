@@ -1,91 +1,3 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.app {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  background-color: #333;
-}
-
-nav li {
-  padding: 10px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.home-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.product-card {
-  width: calc(33.33% - 20px);
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.product-card h3 {
-  margin: 10px 0;
-}
-
-.product-card p {
-  margin: 0;
-}
-
-.product-details {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.product-details button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 16px;
-  cursor: pointer;
-}
-
-.product-details button:hover {
-  background-color: #0056b3;
-}
-
-.product-details select {
-  padding: 8px;
-  border-radius: 5px;
-}
-
 /*------------------------------------------------NAVBAR----------------------------------------*/
 .nav
 {
@@ -147,7 +59,7 @@ nav a:hover {
 .slide
 {
     padding:0px;
-    height: 30px;
+    /*height: 30px;*/
 }
 .slide .slide_container
 {

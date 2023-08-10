@@ -2,21 +2,18 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Layout from './pages/Layout';
 import Contacto from './components/Contacto';
+import './App.css';
 
 const App = () => {
-  return (
-    <>
-     <h1> dd </h1>
+  return (    
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />}> </Route>
-          <Route path = "/contacto" element= {<Contacto/>} > </Route>
-        </Route>
-      </Routes>
-      </BrowserRouter>
-      <h1> hola </h1>
-      </>
+       <Routes>
+          <Route path="/" element={<Layout />}>
+          <Route index element={<Home />}></Route>          
+          <Route path="/contacto" element={<Contacto />}></Route>
+	      </Route>
+       </Routes>
+     </BrowserRouter>            
   );
 };
 

@@ -1,20 +1,17 @@
-import { Routes, Route, Link } from "react-router-dom";
-import App from "../App";
-import Home from "../pages/Home";
-import Contacto from "./Contacto";
+import { Link } from "react-router-dom";
+import logo from '../images/logo.png';
+
 
 const Navbar = () => {
   return (
     <nav className="nav nav_top">
       <div className="logo">
-        <Link to="/"><img src="images/logo.png" width="250" alt="Culinary King" /></Link>
+        <Link to="/"><img src={logo} width="250" alt="Culinary King" /></Link>
       </div>
-      <div className="nav_side">
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/contacto" element={<Contacto />} />
-        </Routes>
+      <div className="nav_side">        
+          <Link to="/">Home</Link>
+          <Link to="/catering">Catering</Link>
+          <Link to="/contacto">Contacto</Link>
       </div>
     </nav>
   );
