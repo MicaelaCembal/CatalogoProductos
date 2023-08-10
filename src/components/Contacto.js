@@ -1,8 +1,10 @@
 import React from 'react';
-
+import Footer from './Footer';
 const Contacto = () => {
   return (
+<div>
     <div className="feed">
+      <br/> <br/> <br/>
       <h2>WRITE A REVIEW</h2>
       <div className="feed_form" method="post">
         <form name="submit-googlesheet">
@@ -13,6 +15,8 @@ const Contacto = () => {
           <button type="submit">Submit</button>
         </form>
       </div>
+      </div>
+      <Footer/>
     </div>
   );
 };
