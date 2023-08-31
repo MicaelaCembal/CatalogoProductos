@@ -5,35 +5,14 @@ import Layout from './pages/Layout';
 import Contacto from './components/Contacto';
 import Catering from './pages/Catering';
 import ViewDeliveryMenu from './components/ViewDeliveryMenu';
-import productosContext from './context/productosContext.js';
+import ProductoProvider from './context/productosContext';
 import axios from 'axios';
 import './App.css';
 
 
 const App = () => {
-  const [productos, setProductos] = useState([]);
-
-  useEffect(() => {
-    listar();
-}, []);
-
-  const CargarProductos = {
-    productos,
-  };
-
-const listar = () => {
-    axios.get('https://dummyjson.com/products')
-        .then((result) => {
-            const productos = result.data.products;
-            console.log(productos);
-            setProductos(productos);
-
-        })
-
-}
-
   return (    
-    <productosContext.Provider value={productos}>
+    <ProductoProvider>
     <BrowserRouter>
        <Routes>
           <Route path="/" element={<Layout />}>
@@ -44,7 +23,7 @@ const listar = () => {
 	      </Route>
        </Routes>
      </BrowserRouter> 
-     </productosContext.Provider >           
+     </ProductoProvider>    
   );
 };
 
