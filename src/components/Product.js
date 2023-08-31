@@ -5,7 +5,7 @@ import cele1 from '../images/cele1.jpg';
 import cele4 from '../images/cele4.jpg';
 import cele3 from '../images/cele3.jpg';
 
-const Main = () => {
+const Product = () => {
   return (
 <div>
 <div className="product" style={{paddingTop: "100px"}}>
@@ -64,4 +64,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Product;
