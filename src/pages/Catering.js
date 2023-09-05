@@ -6,7 +6,7 @@ function Catering() {
   return (
     <div>
       <br/><br/><br/><br/><br/><br/><br/><br/><br/>
-      <SearchBox/>
+
     <CardProducto/>
     </div>
   

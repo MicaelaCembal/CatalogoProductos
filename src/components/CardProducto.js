@@ -5,26 +5,37 @@ import { ProductoContext } from '../context/productosContext.js';
 function CardProducto() {
     const { products } = useContext(ProductoContext);
 
+
     return (
         <div className="product" style={{ paddingTop: "100px" }}>
+        <div className="row">
             {products.map((producto) => (
-                <div className="product_container" style={{ paddingBottom: "50px" }} key={producto.id}>
-                    <div className="item">
-                        <div className="item_img">
-                            <img src={producto.images[0]} alt="..." />
-                        </div>
-                        <div className="item_content">
-                            <h3>CELEBRATE WITH FAMILY &amp; FRIENDS</h3>
-                            <h3>{producto.title}</h3>
-                            <p>{producto.description}</p>
-                            <br /><br /><br />
-                            <Link to="/catering">VENUS AND SPACES</Link>
-                        </div>
-                    </div>
+                <div className="col pb-4 " key={producto.id}>
+                     <div className="card cardProducto">
+                     <img className="card-img-top imagenCampañas" src={producto.images[0]} alt="..." />
+                     <div className="card-body">
+                    <h5 className="card-title tituloCardCampañas mb-2">{producto.title}</h5>
+                    <br/>
+                    <br/>
+                    <p className="card-text descripcionCardCampañas">{producto.description}</p>
+                  </div>
+                  <div className="card-footer text-right">
+                  <Link to="/">
+                      <button className="botonCampañas">
+                        Ver más
+                      </button>
+                    </Link>
+                  </div>
                 </div>
+              </div>
+              
             ))}
+              </div>
         </div>
+
     );
 }
 
 export default CardProducto;
+
+
