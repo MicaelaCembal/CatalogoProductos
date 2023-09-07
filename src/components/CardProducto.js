@@ -2,21 +2,19 @@ import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ProductoContext } from '../context/ProductosContext.js';
 
-function CardProducto({products}) {
+function CardProducto({productoCard}) {
     
 
     return (
-        <div className="product" style={{ paddingTop: "100px" }}>
-        <div className="row">
-            {products.map((producto) => (
-                <div className="col pb-4 " key={producto.id}>
+
+                <div className="col pb-4 " key={productoCard.id}>
                      <div className="card cardProducto">
-                     <img className="card-img-top imagenCampañas" src={producto.images[0]} alt="..." />
+                     <img className="card-img-top imagenCampañas" src={productoCard.images[0]} alt="..." />
                      <div className="card-body">
-                    <h5 className="card-title tituloCardCampañas mb-2">{producto.title}</h5>
+                    <h5 className="card-title tituloCardCampañas mb-2">{productoCard.title}</h5>
                     <br/>
                     <br/>
-                    <p className="card-text descripcionCardCampañas">{producto.description}</p>
+                    <p className="card-text descripcionCardCampañas">{productoCard.description}</p>
                   </div>
                   <div className="card-footer text-right">
                   <Link to="/">
@@ -28,9 +26,7 @@ function CardProducto({products}) {
                 </div>
               </div>
               
-            ))}
-              </div>
-        </div>
+           
 
     );
 }

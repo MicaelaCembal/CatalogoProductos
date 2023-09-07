@@ -3,7 +3,7 @@ import videoSource from '../images/Restaurant food cinematic video advertisement
 function Team() {
   return (
  <div className="team">
- <h2>Our Team</h2>
+ <h2>OUR TEAM </h2>
  <div className="team_container">
    <div className="team_video">
      <video controls>
