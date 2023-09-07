@@ -5,13 +5,15 @@ import Layout from './pages/Layout';
 import Contacto from './components/Contacto';
 import Catering from './pages/Catering';
 import ViewDeliveryMenu from './components/ViewDeliveryMenu';
-import ProductoProvider from './context/productosContext';
+import ProductoProvider from './context/ProductosContext';
+import CategoriaProvider from './context/CategoriasContext';
 import axios from 'axios';
 import './App.css';
 
 
 const App = () => {
   return (    
+    <CategoriaProvider>  
     <ProductoProvider>
     <BrowserRouter>
        <Routes>
@@ -23,7 +25,8 @@ const App = () => {
 	      </Route>
        </Routes>
      </BrowserRouter> 
-     </ProductoProvider>    
+     </ProductoProvider>   
+     </CategoriaProvider>   
   );
 };
 

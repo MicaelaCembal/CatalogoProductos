@@ -1,10 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ProductoContext } from '../context/productosContext.js';
+import { ProductoContext } from '../context/ProductosContext.js';
 
-function CardProducto() {
-    const { products } = useContext(ProductoContext);
-
+function CardProducto({products}) {
+    
 
     return (
         <div className="product" style={{ paddingTop: "100px" }}>
