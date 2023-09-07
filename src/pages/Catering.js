@@ -1,33 +1,54 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import SearchBox from '../components/SearchBox';
-import Product from '../components/Product';
-import CardProducto from '../components/CardProducto';
-import { ProductoContext } from '../context/ProductosContext';
 import FiltroCategorias from '../components/FiltroCategorias';
-import { CategoriasContext } from '../context/CategoriasContext';
 import ListarProductos from '../components/ListarProductos';
+import { ProductoContext } from '../context/ProductosContext';
+import { CategoriasContext } from '../context/CategoriasContext';
 import '../App.css';
 
 function Catering() {
-  const { products,getProducts,getProductsByCategories } = useContext(ProductoContext);
-  const { categories,getCategorias } = useContext(CategoriasContext);
-
-    useEffect(()=>{
-      getProducts()
-    },[])
-
-    useEffect(()=>{
-      getCategorias()
-    },[])
-
-    return (
-      <div className='margen-centralizado'>
-        <div className='margen-superior'> {/* Aplica la clase CSS para el margen superior */}
-          <FiltroCategorias categories={categories} getProductsByCategories={getProductsByCategories} getProducts={getProducts} />
-        </div>
-        <ListarProductos products={products} />
-      </div>
-    );
-  }
+  const { products, getProducts, getProductsByCategories } = useContext(ProductoContext);
+  const { categories, getCategorias } = useContext(CategoriasContext);
+  const [searchText, setSearchText] = useState(''); // Estado para el texto de búsqueda
+  const [filteredProducts, setFilteredProducts] = useState([]);
   
-  export default Catering;
+  useEffect(() => {
+    getProducts();
+  }, []);
+
+  useEffect(() => {
+    getCategorias();
+  }, []);
+
+  useEffect(() => {
+    // Filtrar productos si hay texto de búsqueda, de lo contrario, mostrar todos los productos
+    if (searchText) {
+      const filtered = products.filter((product) =>
+        product.name && product.name.toLowerCase().includes(searchText.toLowerCase())
+      );
+      setFilteredProducts(filtered);
+    } else {
+      setFilteredProducts(products);
+    }
+  }, [searchText, products]);
+
+  const handleSearch = (searchText) => {
+    setSearchText(searchText); // Actualizar el texto de búsqueda
+  };
+
+  return (
+    <div className='margen-centralizado'>
+      <div className='margen-superior'>
+        <SearchBox onSearch={handleSearch} searchText={searchText} />
+        <FiltroCategorias
+          categories={categories}
+          getProductsByCategories={getProductsByCategories}
+          getProducts={getProducts}
+        />
+      </div>
+      <ListarProductos products={filteredProducts} />
+    </div>
+  );
+}
+
+export default Catering;

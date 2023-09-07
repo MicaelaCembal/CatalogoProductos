@@ -52,14 +52,14 @@
 }
 .nav_side a:hover
 {
-    color: rgb(253, 0, 84);
+    color:#e80c7a;
     transition: all 1s ease;
 }
 /* - Search Bar
 ------------------------------------------------------------- */
 .search-box {
     background: var(--bs-light);
-    height: 0px;
+    height: 60px;
     transition: height 0.3s ease-out;
   }
   
@@ -650,7 +650,7 @@ footer p
 .cardProducto{
     width: 28rem;
   height: 450px !important;
-  background-color: rgb(253, 0, 84) !important;
+  background-color:#e80c7a !important;
   transition: background-color .5s;
   border-radius:15px;
   margin: 8px;
@@ -686,9 +686,9 @@ footer p
     background-color: #fff  !important;
     text-align: center;
     border-radius: 15px;
-    color: rgb(253, 0, 84) !important;
+    color:#e80c7a !important;
     font-size:14px;
-    border-color:  rgb(253, 0, 84)!important;
+    border-color: #e80c7a!important;
     transition: background-color .5s;
     font-family: 'Rubik', sans-serif;
       text-transform: lowercase!important;
@@ -727,7 +727,7 @@ footer p
   .coloresDropDown{
     width: 150px;
     height:30px;
-    background-color: rgb(253, 0, 84) !important;
+    background-color:#e80c7a !important;
     border-radius: 15px;
     color: rgb(255, 255, 255) !important;
     font-size:14px;
@@ -741,9 +741,9 @@ footer p
     height:auto;
     background-color: rgb(255, 255, 255) !important;
     border-radius: 15px;
-    color:  rgb(253, 0, 84)  !important;
+    color: #e80c7a  !important;
     font-size:14px;
-    border-color:  rgb(253, 0, 84) !important;
+    border-color: #e80c7a !important;
     border-width: 3px;
     font-family: 'Rubik', sans-serif;
   }
@@ -753,7 +753,7 @@ footer p
   }
 
   .categoriasItems:hover {
-    background-color: rgb(253, 0, 84)!important;
+    background-color:#e80c7a!important;
     font-size:15px;
     color: #fff !important; 
     box-shadow:
