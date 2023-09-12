@@ -32,7 +32,7 @@ const ProductoProvider = (props) => {
       });
   }
 
-  const BuscarProductos=(buscar)=>{
+  const getBuscarProductos=(buscar)=>{
     axios.get('https://dummyjson.com/products/search?q=' + buscar)
     .then((result) => {
       const products = result.data.products;
@@ -47,7 +47,8 @@ const ProductoProvider = (props) => {
       products,
       getProducts, 
       getProductsByCategories,
-      getProductsLimit
+      getProductsLimit,
+      getBuscarProductos
       }}>
       {props.children}
     </ProductoContext.Provider>

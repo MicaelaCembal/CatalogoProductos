@@ -774,4 +774,27 @@ h2
     text-align: center;
 }
 
+
+.searchBarEstilos{
+    width: 1000px;
+    height:30px;
+    background-color:#ffdeef !important;
+    border-radius: 15px;
+    color:#e80c7a!important;
+    font-size:16px;
+    border-color:  rgb(255, 255, 255)!important;
+    font-family: 'Rubik', sans-serif;
+
+  }
+
+  .lupita{
+    background-color: transparent;
+    border-color:  transparent !important;
+  }
+  .lupita1{
+   
+    width: auto;
+    height:20px;
+  }
+
 /*--------------------------------------------CATERING---------------------------------------*/

@@ -25,16 +25,16 @@ function SearchBox({ onSearch, searchText }) {
             <use xlinkHref="#close"></use>
           </svg>
         </div>
-        <form id="search-form" className="text-center pt-3" onSubmit={handleSubmit}>
+        <form id="search-form" className="text-center pt-3 " onSubmit={handleSubmit}>
           <input
             type="text"
-            className="search-input fs-5 p-4 bg-transparent"
+            className="search-input fs-5 p-4 bg-transparent searchBarEstilos"
             placeholder="Search..."
             value={inputText}
             onChange={handleChange}
           />
-          <button type="submit" className="search-button">
-            <FaSearch />
+          <button type="submit" className="search-button lupita">
+            <FaSearch className= "lupita1"/>
           </button>
         </form>
       </div>
