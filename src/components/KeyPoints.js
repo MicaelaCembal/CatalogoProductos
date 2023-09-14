@@ -1,14 +1,14 @@
 import React from 'react';
 import back22Image from '../images/back22.jpg';
+
 const KeyPoints = () => {
   return (
-<div>
-
- <div className="keypoint">
-        <h2>CHOOSE FROM</h2><br/><br/><br/>
+    <div>
+      <div className="keypoint">
+        <h2>CHOOSE FROM</h2><br /><br /><br />
         <div className="key_container">
           <div className="key_img">
-            <img src={back22Image} alt="keypoints"/>
+            <img src={back22Image} alt="keypoints" />
           </div>
           <div className="key_content">
             <ul>
@@ -22,8 +22,8 @@ const KeyPoints = () => {
           </div>
         </div>
       </div>
-      <hr/>
-    
+      <hr />
+
     </div>
   );
 };

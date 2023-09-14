@@ -1,12 +1,7 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import { ProductoContext } from "../context/ProductosContext"; 
+import React from "react";
+import PropTypes from "prop-types"; 
+
 function FiltroCategorias({ categories, getProductsByCategories, getProducts }) {
-  //const { getProductsByCategories } = useContext(ProductoContext); 
-
-
-
-  
   return (
     <div className="btn-group" role="group" aria-label="Button group with nested dropdown">
       <div className="btn-group" role="group">
@@ -26,13 +21,19 @@ function FiltroCategorias({ categories, getProductsByCategories, getProducts }) 
               {categoria}
             </a>
           ))}
-            <a  className="dropdown-item categoriasItems" onClick={() => getProducts()}>
-              All
-            </a>
+          <a className="dropdown-item categoriasItems" onClick={() => getProducts()}>
+            All
+          </a>
         </div>
       </div>
     </div>
   );
 }
+
+FiltroCategorias.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.string).isRequired,
+  getProductsByCategories: PropTypes.func.isRequired,
+  getProducts: PropTypes.func.isRequired,
+};
 
 export default FiltroCategorias;

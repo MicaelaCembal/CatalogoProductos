@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 
 function SearchBox({ onSearch, searchText }) {
   const [inputText, setInputText] = useState(searchText);
@@ -41,5 +42,10 @@ function SearchBox({ onSearch, searchText }) {
     </div>
   );
 }
+
+SearchBox.propTypes = {
+  onSearch: PropTypes.func.isRequired,
+  searchText: PropTypes.string.isRequired,
+};
 
 export default SearchBox;

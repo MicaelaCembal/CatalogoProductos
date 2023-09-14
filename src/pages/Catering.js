@@ -9,7 +9,7 @@ import '../App.css';
 function Catering() {
   const { products, getProducts, getProductsByCategories,getBuscarProductos } = useContext(ProductoContext);
   const { categories, getCategorias } = useContext(CategoriasContext);
-  const [searchText, setSearchText] = useState(''); // Estado para el texto de búsqueda
+  const [searchText, setSearchText] = useState(''); 
   
   useEffect(() => {
     getProducts();
@@ -20,14 +20,13 @@ function Catering() {
   }, []);
 
   useEffect(() => {
-    // Filtrar productos si hay texto de búsqueda, de lo contrario, mostrar todos los productos
     if (searchText) {
       getBuscarProductos(searchText);
     }
   }, [searchText]);
 
   const handleSearch = (searchText) => {
-    setSearchText(searchText); // Actualizar el texto de búsqueda
+    setSearchText(searchText); 
   };
 
   return (
