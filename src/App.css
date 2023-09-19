@@ -843,3 +843,98 @@ h2 {
 .detalle-producto {
     margin-top: 25px;
 }
+
+.boton-agregar{
+    float: right !important;
+    width: 150px;
+    height: 30px;
+    background-color: #fff !important;
+    text-align: center;
+    border-radius: 15px;
+    color: #108501 !important;
+    font-size: 14px;
+    border-color: #e80c7a !important;
+    transition: background-color .5s;
+    font-family: 'Rubik', sans-serif;
+    text-transform: lowercase !important;
+    margin-right: 2px;
+}
+
+
+.boton-agregar:first-letter {
+    text-transform: uppercase !important;
+}
+
+.boton-agregar:hover {
+    background-color: #fff !important;
+    font-weight: bold;
+    border-color: rgb(190, 0, 63) !important;
+    font-size: 15px;
+    box-shadow:
+        inset 0 -2em 2em rgba(0, 0, 0, 0.1),
+        0 0 0 2px #ffffff,
+        0.3em 0.3em 3em rgba(0, 0, 0, 0.1);
+
+}
+
+.boton-quitar{
+    float: right !important;
+    width: 150px;
+    height: 30px;
+    background-color: #fff !important;
+    text-align: center;
+    border-radius: 15px;
+    color: #be0000 !important;
+    font-size: 14px;
+    border-color: #e80c7a !important;
+    transition: background-color .5s;
+    font-family: 'Rubik', sans-serif;
+    text-transform: lowercase !important;
+    margin-right: 2px;
+}
+
+
+.boton-quitar:first-letter {
+    text-transform: uppercase !important;
+}
+
+.boton-quitar:hover {
+    background-color: #fff !important;
+    border-color: rgb(190, 0, 63) !important;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow:
+        inset 0 -2em 2em rgba(0, 0, 0, 0.1),
+        0 0 0 2px #ffffff,
+        0.3em 0.3em 3em rgba(0, 0, 0, 0.1);
+
+}
+
+.carrito {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+
+  .medidaTabla{
+    width:80%;
+    margin-left:10%; 
+  }
+.tablaCampos{
+    text-decoration: none !important;
+    color: rgb(37, 0, 19) !important;
+    font-weight: bold !important;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif !important;
+    font-size: 20px !important;
+    
+}
+
+.tablaCamInfo{
+    text-decoration: none !important;
+    color: rgb(37, 0, 19) !important;
+    font-weight: bold !important;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif !important;
+    font-size: 15px !important;
+    
+}

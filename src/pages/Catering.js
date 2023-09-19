@@ -6,10 +6,12 @@ import { ProductoContext } from '../context/ProductosContext';
 import { CategoriasContext } from '../context/CategoriasContext';
 import '../App.css';
 
+
 function Catering() {
   const { products, getProducts, getProductsByCategories,getBuscarProductos } = useContext(ProductoContext);
   const { categories, getCategorias } = useContext(CategoriasContext);
   const [searchText, setSearchText] = useState(''); 
+  
   
   useEffect(() => {
     getProducts();
@@ -39,7 +41,7 @@ function Catering() {
           getProducts={getProducts}
         />
       </div>
-      <ListarProductos products={products} />
+      <ListarProductos products={products}  />
     </div>
   );
 }

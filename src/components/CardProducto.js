@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types'; 
 import { Link } from 'react-router-dom';
 
-function CardProducto({ productoCard }) {
+function CardProducto({ productoCard, handleAgregar, handleQuitar }) {
+  const [added, setAdded] = useState(false)
+
+  const clickAgregar = () => {
+      handleAgregar()
+      setAdded(true)
+  }
+  const clickQuitar = () => {
+      handleQuitar()
+      setAdded(false)
+  }
   return (
     <div className="col pb-4" key={productoCard.id}>
       <div className="card cardProducto">
@@ -17,6 +27,23 @@ function CardProducto({ productoCard }) {
           <Link to={`/product/${productoCard.id}`}>
             <button className="botonCampañas">Ver más</button>
           </Link>
+          {added
+                    ? <button
+                        type="button"
+                        className="boton-quitar"
+                        onClick={clickQuitar}
+
+                    >
+                        Quitar del Carrito X
+                    </button>
+                    : <button
+                        type="button"
+                        className="boton-agregar"
+                        onClick={clickAgregar}
+                    >
+                        Agregar Carrito
+                    </button>
+                }
         </div>
       </div>
     </div>
