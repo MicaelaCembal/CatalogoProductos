@@ -16,8 +16,8 @@ export const Carrito = () => {
 
     return (
         <>
-         <br></br><br></br><br></br><br></br><br></br><br></br>
-         <br></br><br></br><br></br><br></br><br></br><br></br>
+     <div className='margen-centralizado'>
+      <div className='margen-superior'>
             <table className="table medidaTabla">
                 <thead>
                     <tr>
@@ -65,11 +65,13 @@ export const Carrito = () => {
 
             <div className="d-grid gap-2">
                 <button 
-                className="botonCampañas"
+                className="botonCarritoComprar"
                 onClick={handleImpresion}
                 disabled={listaCompras<1}
 
                 >COMPRAR</button>
+            </div>
+            </div>
             </div>
         </>
     )

@@ -37,11 +37,12 @@ function DetalleProducto() {
 
   return (
     <div className="detalle-producto">
-        <br></br><br></br><br></br><br></br><br></br><br></br>
+        <div className='margen-centralizado'>
+      <div className='margen-superior'>
         <h2 className='textoDetalleTitulo'>{product.title}</h2>
       <img className='imagenCentrada' src={product.images[0]} alt={product.title} />
       <p className='textoDetalleDescripcion'>{product.description}</p>
-    </div>
+    </div> </div> </div>
   );
 }
 
